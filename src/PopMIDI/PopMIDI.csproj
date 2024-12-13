@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NAudio.cs" />
     <Compile Include="Pop.cs" />
     <Compile Include="Source.cs">
       <SubType>Form</SubType>
