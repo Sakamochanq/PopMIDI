@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using Melanchall.DryWetMidi.Core;
+using System.Windows.Forms;
+using NAudio.Wave;
+using System.IO;
 
 namespace PopMIDI
 {
