@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using System.IO;
 
 namespace PopMIDI
 {
@@ -17,11 +18,13 @@ namespace PopMIDI
 
         private void OpenFileButton_Click(object sender, System.EventArgs e)
         {
-            using (var ofd = new OpenFileDialog() { Filter = "WaveFormオーディオファイル (*.wav) | *.wav; | Mp3オーディオファイル (*.mp3) | *.mp3;" })
+            using (var ofd = new OpenFileDialog() { Filter = "Mp3オーディオファイル (*.mp3) | *.mp3; | WaveFormオーディオファイル (*.wav) | *.wav;" })
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     AudioFilePath = ofd.FileName;
+                    var fileInfo = new FileInfo(AudioFilePath);
+                    audioNameLabel.Text = fileInfo.Name;
                 }
             }
         }

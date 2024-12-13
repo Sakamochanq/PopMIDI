@@ -39,6 +39,7 @@
             this.sStopButton = new System.Windows.Forms.Button();
             this.timeLabel = new System.Windows.Forms.Label();
             this.sProgressbar = new System.Windows.Forms.ProgressBar();
+            this.audioNameLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,9 +92,9 @@
             // 
             // sPlayButton
             // 
-            this.sPlayButton.Location = new System.Drawing.Point(28, 104);
+            this.sPlayButton.Location = new System.Drawing.Point(207, 83);
             this.sPlayButton.Name = "sPlayButton";
-            this.sPlayButton.Size = new System.Drawing.Size(76, 38);
+            this.sPlayButton.Size = new System.Drawing.Size(76, 29);
             this.sPlayButton.TabIndex = 2;
             this.sPlayButton.Text = "再生";
             this.sPlayButton.UseVisualStyleBackColor = true;
@@ -101,9 +102,9 @@
             // 
             // sStopButton
             // 
-            this.sStopButton.Location = new System.Drawing.Point(110, 104);
+            this.sStopButton.Location = new System.Drawing.Point(289, 83);
             this.sStopButton.Name = "sStopButton";
-            this.sStopButton.Size = new System.Drawing.Size(76, 38);
+            this.sStopButton.Size = new System.Drawing.Size(76, 29);
             this.sStopButton.TabIndex = 3;
             this.sStopButton.Text = "停止";
             this.sStopButton.UseVisualStyleBackColor = true;
@@ -112,7 +113,7 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(26, 53);
+            this.timeLabel.Location = new System.Drawing.Point(29, 83);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(71, 12);
             this.timeLabel.TabIndex = 4;
@@ -120,16 +121,27 @@
             // 
             // sProgressbar
             // 
-            this.sProgressbar.Location = new System.Drawing.Point(28, 72);
+            this.sProgressbar.Location = new System.Drawing.Point(31, 102);
             this.sProgressbar.Name = "sProgressbar";
-            this.sProgressbar.Size = new System.Drawing.Size(258, 10);
+            this.sProgressbar.Size = new System.Drawing.Size(157, 10);
             this.sProgressbar.TabIndex = 5;
+            // 
+            // audioNameLabel
+            // 
+            this.audioNameLabel.AutoSize = true;
+            this.audioNameLabel.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.audioNameLabel.Location = new System.Drawing.Point(28, 52);
+            this.audioNameLabel.Name = "audioNameLabel";
+            this.audioNameLabel.Size = new System.Drawing.Size(64, 15);
+            this.audioNameLabel.TabIndex = 6;
+            this.audioNameLabel.Text = "unnamed";
             // 
             // Source
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 552);
+            this.Controls.Add(this.audioNameLabel);
             this.Controls.Add(this.sStopButton);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.sProgressbar);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.ProgressBar sProgressbar;
         private System.Windows.Forms.Timer audioTimer;
+        private System.Windows.Forms.Label audioNameLabel;
     }
 }
 
