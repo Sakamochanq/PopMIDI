@@ -8,6 +8,7 @@ namespace PopMIDI
         public Source()
         {
             InitializeComponent();
+            sPlayButton.Enabled = false;
             sStopButton.Enabled = false;
             audioTimer.Interval = 500;
             audioTimer.Tick += audioTimer_Tick;
@@ -22,9 +23,18 @@ namespace PopMIDI
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    sPlayButton.Enabled = true;
                     AudioFilePath = ofd.FileName;
                     var fileInfo = new FileInfo(AudioFilePath);
                     audioNameLabel.Text = fileInfo.Name;
+                }
+                else
+                {
+                    a.Stop();
+                    sPlayButton.Enabled = false;
+                    sStopButton.Enabled = false;
+                    audioNameLabel.Text = "unnamed";
+                    timeLabel.Text = "00:00 / 00:00";
                 }
             }
         }
@@ -34,17 +44,10 @@ namespace PopMIDI
 
         private void sPlayButton_Click(object sender, System.EventArgs e)
         {
-            if (AudioFilePath != null)
-            {
-                this.audioTimer.Start();
-                sPlayButton.Enabled = false;
-                sStopButton.Enabled = true;
-                a.Play(AudioFilePath);
-            }
-            else
-            {
-                MessageBox.Show("音声ファイルを選択してください", title, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
+            this.audioTimer.Start();
+            sPlayButton.Enabled = false;
+            sStopButton.Enabled = true;
+            a.Play(AudioFilePath);
         }
 
         private void sStopButton_Click(object sender, System.EventArgs e)
