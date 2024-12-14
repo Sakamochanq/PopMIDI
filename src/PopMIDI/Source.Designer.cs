@@ -70,19 +70,19 @@
             this.OpenFileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OpenFileButton.Name = "OpenFileButton";
             this.OpenFileButton.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.OpenFileButton.Size = new System.Drawing.Size(180, 22);
+            this.OpenFileButton.Size = new System.Drawing.Size(167, 22);
             this.OpenFileButton.Text = "開く(&O)";
             this.OpenFileButton.Click += new System.EventHandler(this.OpenFileButton_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(164, 6);
             // 
             // ExitButton
             // 
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(180, 22);
+            this.ExitButton.Size = new System.Drawing.Size(167, 22);
             this.ExitButton.Text = "終了(&X)";
             // 
             // audioTimer
@@ -129,10 +129,10 @@
             // audioNameLabel
             // 
             this.audioNameLabel.AutoSize = true;
-            this.audioNameLabel.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.audioNameLabel.Font = new System.Drawing.Font("MS UI Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.audioNameLabel.Location = new System.Drawing.Point(28, 52);
             this.audioNameLabel.Name = "audioNameLabel";
-            this.audioNameLabel.Size = new System.Drawing.Size(64, 15);
+            this.audioNameLabel.Size = new System.Drawing.Size(57, 13);
             this.audioNameLabel.TabIndex = 6;
             this.audioNameLabel.Text = "unnamed";
             // 
